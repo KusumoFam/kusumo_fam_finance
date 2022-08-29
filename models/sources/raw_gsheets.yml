@@ -5,4 +5,5 @@ sources:
   - name: raw_gsheets
     loader: google_sheets
     tables:
-      - name: transactions
+      - name: transactions_raw
+
