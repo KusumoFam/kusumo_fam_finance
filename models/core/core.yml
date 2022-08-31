@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: dim_accounts
+    description: "Accounts"
+    columns:
+      - name: account_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: account_name
+        description: "Account Name"
+
+  - name: dim_categories
+    description: "Category of the transaction"
+    columns:
+      - name: category_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: category
+        description: "Category of the transaction"
+      - name: subcategory
+        description: "Each Category has a subcategory that helps categorize the transaction even more"
+
+  - name: dim_vendors
+    description: "Vendor of the transaction. This is 'which' company you spent your money on"
+    columns:
+      - name: vendor_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: vendor_name
+        description: "Vendor Name"

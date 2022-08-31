@@ -1,15 +1,16 @@
 {{
     config(
-        materialized = 'table'
+        materialized = 'table',
+        schema = 'stg'
     )
 }}
 
 select
     Period as date,
-    Accounts as account,
-    Category as category,
-    Subcategory as subcategory,
-    trim(Note) as vendor,
+    Accounts as account_name,
+    trim(Category) as category,
+    trim(Subcategory) as subcategory,
+    trim(Note) as vendor_name,
     CAD as amount,
     TransactionType as transaction_type,
     Detail as detail
