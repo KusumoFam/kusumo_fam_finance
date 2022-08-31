@@ -22,8 +22,16 @@ models:
           - not_null
       - name: category
         description: "Category of the transaction"
+        meta:
+          metrics:
+            num_category_count:
+              type: count
       - name: subcategory
         description: "Each Category has a subcategory that helps categorize the transaction even more"
+        meta:
+          metrics:
+            num_subcategory_count:
+              type: count
 
   - name: dim_vendors
     description: "Vendor of the transaction. This is 'which' company you spent your money on"
@@ -35,3 +43,45 @@ models:
           - not_null
       - name: vendor_name
         description: "Vendor Name"
+        meta:
+          metrics:
+            vendor_name_count:
+              type: count
+
+  - name: fct_transactions
+    description: "Fact table. Grain is each transaction"
+    columns:
+      - name: transaction_id
+        meta:
+          metrics:
+            transaction_ids_count:
+              type: count
+        tests:
+          - unique
+          - not_null
+      - name: date
+      - name: account_id
+        tests:
+          - not_null
+      - name: category_id
+        tests:
+          - not_null
+      - name: vendor_id
+        tests:
+          - not_null
+      - name: detail
+      - name: amount
+        meta:
+          metrics:
+            total_amount:
+              type: sum
+      - name: transaction_type
+    meta:
+      joins:
+        - join: dim_accounts
+          sql_on : ${dim_accounts.account_id} = ${fct_transactions.account_id}
+        - join: dim_categories
+          sql_on : ${dim_categories.category_id} = ${fct_transactions.category_id}
+        - join: dim_vendors
+          sql_on : ${dim_vendors.vendor_id} = ${fct_transactions.vendor_id}
+

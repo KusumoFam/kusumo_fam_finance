@@ -6,6 +6,7 @@
 
 
 select
+    {{ dbt_utils.surrogate_key(['date', 'da.account_id', 'dc.category_id', 'dv.vendor_id', 'st.amount', 'st.transaction_type']) }} as transaction_id,
     date,
     da.account_id,
     dc.category_id,
