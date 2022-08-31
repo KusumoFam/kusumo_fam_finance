@@ -9,7 +9,7 @@ select
     Period as date,
     Accounts as account_name,
     trim(Category) as category,
-    trim(Subcategory) as subcategory,
+    coalesce(trim(Subcategory), trim(Category)) as subcategory,
     trim(Note) as vendor_name,
     CAD as amount,
     TransactionType as transaction_type,
