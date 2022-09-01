@@ -10,12 +10,12 @@ The goal of this project is to create an Explorer for my family in order to gain
 - BigQuery (Data Warehouse)
 
 ## Data Model
-
+![Data Model](http://www.plantuml.com/plantuml/png/XP51IWGn44NtTOgoby8ilC4in0juWAOwAST8foB9pq0Ztbq61zCn0xDzALx-hpeMI4QDAptWNQFoEInP39IM3tLW7-8ipgLgAFn5pA_8mKvyPNFm8pE9Ij-qLpY1db8EsackT6kM7MoarEKFzjgpca-vS_wYPcpeNwmtXnbPh8X3IDP9TlncmyR64aEAPu6o5oWnlwn9m18lbjlVOVlKzk8L4jPoYTrTOdgQ-F5mu2cARTFGXVgTtnzlkxmxItHKypMkFm00)
 
 ## Insights Gained Examples
 
 ### Question 1: Did our monthly gas expense increases due to Russian invasion to Ukraine?
-
+![Gas Chart](https://gcdnb.pbrd.co/images/tjEgqfxNTEea.png?o=1)
 Answer: Eventhough our family owns a gas car, our family didn't get the impacted by the gas increase from Russian and Ukraine war. We use the car every single day. I drive my wife to work and I also pick her up from work. Each drive is roughly 15 mins to 20 mins.
 
 ### Question 2: Did our monthly groceries expense increases due to inflation?
