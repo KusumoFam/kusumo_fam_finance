@@ -21,3 +21,6 @@ Answer: Assume that the Russian and Ukraine war started on Feb 2022. Eventhough 
 ### Question 2: Did our monthly groceries expense increases due to inflation?
 ![Grocery Chart](https://gcdnb.pbrd.co/images/H8VQ5JiYrmBU.png?o=1)
 Answer: Assume the inflation started going crazy on January 2022, our grocery expenses actually did NOT increase.
+
+## Next Evolution:
+- Compare with budget
