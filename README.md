@@ -16,7 +16,7 @@ The goal of this project is to create an Explorer for my family in order to gain
 
 ### Question 1: Did our monthly gas expense increases due to Russian invasion to Ukraine?
 ![Gas Chart](https://gcdnb.pbrd.co/images/tjEgqfxNTEea.png?o=1)
-Answer: Eventhough our family owns a gas car, our family didn't get the impacted by the gas increase from Russian and Ukraine war. We use the car every single day. I drive my wife to work and I also pick her up from work. Each drive is roughly 15 mins to 20 mins.
+Answer: Assume that the Russian and Ukraine war started on Feb 2022. Eventhough our family owns a gas car, our family didn't get the impacted by the gas increase from Russian and Ukraine war. We use the car every single day. I drive my wife to work and I also pick her up from work. Each drive is roughly 15 mins to 20 mins.
 
 ### Question 2: Did our monthly groceries expense increases due to inflation?
 ![Grocery Chart](https://gcdnb.pbrd.co/images/H8VQ5JiYrmBU.png?o=1)
