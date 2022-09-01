@@ -75,6 +75,9 @@ models:
           metrics:
             total_amount:
               type: sum
+            average_amount:
+              type: average
+              round: 2
       - name: transaction_type
     meta:
       joins:
