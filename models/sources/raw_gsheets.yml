@@ -7,13 +7,3 @@ sources:
     tables:
       - name: transactions_raw
 
-  - name: spotify
-    tables:
-      - name: fct_play
-        columns:
-        - name: "play_id"
-          meta:
-            metrics:
-              total_order_count:
-                type: count_distinct
-
