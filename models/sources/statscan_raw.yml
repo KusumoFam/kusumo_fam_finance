@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: statscan_raw
+    loader: cloud_function
+    tables:
+      - name: monthly_gas_average
