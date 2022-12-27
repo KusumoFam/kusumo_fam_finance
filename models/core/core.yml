@@ -60,6 +60,9 @@ models:
           - unique
           - not_null
       - name: date
+        meta:
+          dimension:
+            type: date
       - name: account_id
         tests:
           - not_null
@@ -87,4 +90,6 @@ models:
           sql_on : ${dim_categories.category_id} = ${fct_transactions.category_id}
         - join: dim_vendors
           sql_on : ${dim_vendors.vendor_id} = ${fct_transactions.vendor_id}
+        - join: monthly_gas_average
+          sql_on : date_trunc(${fct_transactions.date}, month) = ${monthly_gas_average.month_date}
 
