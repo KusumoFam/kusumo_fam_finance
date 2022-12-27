@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: monthly_gas_average
+    schema: statscan
+    description: "Accounts"
+    columns:
+      - name: month_date
+        description: "Account Name"
+      - name: value
