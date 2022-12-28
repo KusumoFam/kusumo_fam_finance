@@ -8,3 +8,32 @@ models:
       - name: month_date
         description: "Account Name"
       - name: value
+        meta:
+          dimension:
+            sql: "${TABLE}.value / 100"
+            round: 2
+            format: 'usd'
+  - name: product_catalog
+    columns:
+      - name: product_id
+      - name: name
+      - name: unit_of_measurement
+  - name: monthly_product_average_price
+    schema: statscan
+    description: "Accounts"
+    columns:
+      - name: date_month
+      - name: product_id
+      - name: value
+        meta:
+          dimension:
+            format: 'usd'
+          metrics:
+            total_amount:
+              type: sum
+    meta:
+      joins:
+        - join: product_catalog
+          sql_on: ${product_catalog.product_id} = ${monthly_product_average_price.product_id}
+        # - join
+        #   sql_on : date_trunc(${fct_transactions.date}, month) = ${monthly_gas_average.month_date}

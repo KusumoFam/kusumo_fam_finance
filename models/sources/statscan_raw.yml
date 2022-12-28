@@ -5,3 +5,5 @@ sources:
     loader: cloud_function
     tables:
       - name: monthly_gas_average
+      - name: monthly_product_average_price
+      - name: product_catalog
